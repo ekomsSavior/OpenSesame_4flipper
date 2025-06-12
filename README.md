@@ -1,7 +1,7 @@
 # OpenSesame_4flipper
 OPENSESAME SUBGHZ BRUTEFORCE BUNDLE
 
-this ones for d3s3rtappl3
+this ones for desertapple3
 
 inspired by samyk's opensesame attack
 
