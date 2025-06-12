@@ -39,13 +39,7 @@ STEP 1: Download & Install QFlipper
 
  •	On Windows, use Notepad or Notepad++
 
-2. Copy the following files from this repository and paste into each file:
-
- opensesame_315.sub
-
- opensesame_390.sub
-
- opensesame_433.sub
+2. Copy the following files from this repository 
 
 3. Save each file:
 
@@ -75,9 +69,7 @@ STEP 1: Download & Install QFlipper
 
 /subghz/
 
-
-
- 4.	Drag & drop your 3 files into that folder
+4.	Drag & drop your 3 files into that folder
 
  5.	Wait for upload confirmation
 
