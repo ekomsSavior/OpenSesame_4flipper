@@ -62,7 +62,7 @@ STEP 1: Download & Install QFlipper
 
  •	File encoding: UTF-8
 
- •	File extension: .sub (make sure it’s not .txt)
+ •	File extension: .sub 
 
 ⸻
 
@@ -70,7 +70,7 @@ STEP 1: Download & Install QFlipper
 
  1.	Open QFlipper
 
- 2.	Click the file manager (📁 icon in QFlipper)
+ 2.	Click the file manager
 
  3.	Navigate to:
 
