@@ -7,6 +7,13 @@ inspired by samyk's opensesame attack
 
 ⸻
 
+Firmware Requirements & things you need: 
+
+ - [Unleashed Firmware](https://github.com/DarkFlippers/unleashed)
+
+-  an external CC1101 module
+---------
+
  WINDOWS + MAC INSTALLATION GUIDE
 
 All instructions are 100% identical for both Windows and macOS unless otherwise noted
