@@ -6,8 +6,49 @@ this ones for desertapple3
 inspired by samyk's opensesame attack
 
 ⸻
+## How the Attack Works
 
-Firmware Requirements & things you need: 
+OpenSesame written by SAMYK uses a **Flipper-compatible SubGhz RAW file** to replay a captured garage door signal that was encoded using a fixed binary pattern. These older fixed-code systems operate without encryption or rolling code, making them susceptible to brute-force or replay-based attacks.
+
+The included `.sub` file transmits a sequence that mimics a legitimate remote. If a matching code is received by a vulnerable garage door receiver, the door will open.
+
+---
+
+## De Bruijn Sequence Brute Forcing
+
+Some modern garage door remotes transmit a fixed number of bits (e.g., 12-bit, 18-bit, or 24-bit codes). Instead of manually trying every code one-by-one, OpenSesame can be adapted to use a **De Bruijn sequence**, a mathematical structure that contains every possible combination of bits in a sliding window.
+
+While this base repository contains a single replayable fixed-code signal, future updates may include:
+
+- A full De Bruijn sequence transmitter for known bit-length openers
+- A Flipper loop-mode or on-button-press transmitter
+- User-selectable De Bruijn segments for popular protocols
+
+---
+
+## Compatibility Notes
+
+This signal targets **older fixed-code garage doors** operating at 390 MHz with OOK modulation. This includes:
+
+- Genie Intellicode (pre-rolling code)
+- LiftMaster/Chamberlain units manufactured before ~2006
+- Some standalone DIY garage or gate controllers
+- Alarm system panels using fixed SubGhz sequences
+
+It will **not work** on systems with:
+
+- Rolling code encryption
+- Challenge-response authentication
+- Smart garage integrations (e.g., MyQ, Wi-Fi linked)
+
+---
+
+## Ethical Use
+
+This tool is provided for research and educational purposes. Only use on devices you own or are authorized to test. Misuse may be illegal depending on your jurisdiction.
+
+
+## Firmware Requirements & things you need: 
 
  - [Unleashed Firmware](https://github.com/DarkFlippers/unleashed)
 
