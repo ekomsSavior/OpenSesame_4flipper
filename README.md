@@ -186,7 +186,7 @@ If you're creating your `.sub` files inside a **Kali Linux VM**, but you're usin
    * `Ctrl + y` 
    * `enter` to exit
   
- DO THIS FOR ALL THREE FILES
+ DO THIS FOR ALL THREE FILES 390, 315 and 433.
 
 5. Confirm it saved:
 
