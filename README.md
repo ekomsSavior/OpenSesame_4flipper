@@ -148,3 +148,127 @@ STEP 4: Launch on Flipper
 ### Disclaimer: only use on equipment you have explicit permission to test on. user assumes all risk.
 
 x0x thank you homies for all the continued support x0x
+
+------
+
+##  Troubleshooting
+
+## Guide: Using Kali VM + Windows to Flash Your Flipper
+
+If you're creating your `.sub` files inside a **Kali Linux VM**, but you're using **Windows** to run **QFlipper**, follow this guide to easily build and transfer files to your Flipper!
+
+---
+
+### Step 1: Create Your `.sub` File in Kali Linux
+
+1. **Open your Kali VM**
+
+2. Open a Terminal and run:
+
+   ```bash
+   nano opensesame_390.sub
+   ```
+
+3. Paste the contents of the `.sub` file from the GitHub repo:
+
+   ```
+   Filetype: Flipper SubGhz RAW File
+   Version: 1
+   Frequency: 390000000
+   Preset: FuriHalSubGhzPresetOok650Async
+   Protocol: RAW
+   RAW_Data: 1000 1000 1000 3000 ...
+   ```
+
+4. Press:
+
+   * `Ctrl + x` (to save)
+   * `Ctrl + y` 
+   * `enter` to exit
+  
+ DO THIS FOR ALL THREE FILES
+
+5. Confirm it saved:
+
+   ```bash
+   ls
+   ```
+
+   You should see `opensesame_390.sub`
+
+---
+
+### Step 2: Start a Local HTTP Server from Kali
+
+This lets you download the `.sub` file from your **Windows browser**.
+
+1. In the same Terminal, run:
+
+   ```bash
+   python3 -m http.server 8080
+   ```
+
+   This starts a local web server on port 8080.
+
+---
+
+### Step 3: Find Your Kali VM's IP Address
+
+In a new Terminal window, type:
+
+```bash
+ip a
+```
+
+Look for an IP that looks like `192.168.x.x` or `10.x.x.x`
+You’ll see something like:
+
+```
+inet 192.168.56.101/24
+```
+
+That’s your **Kali VM’s IP address** — in this case:
+ **`192.168.56.101`**
+
+---
+
+### Step 4: Download the File on Your Windows Host
+
+1. Open **Chrome** or **Edge** on your Windows host
+2. Go to:
+
+```
+http://192.168.56.101:8080
+```
+
+(Replace with the actual IP from Step 3)
+
+3. You’ll see a file list — right-click your `.sub` file → **Save As...**
+
+4. When saving:
+
+   * **File name:** `opensesame_390.sub`
+   * **Save as type:** `All Files (*.*)`
+   * **Not `.txt`!**
+
+---
+
+### Step 5: Upload to Flipper Using QFlipper
+
+1. Open **QFlipper**
+2. Go to the **File Manager**
+3. Navigate to:
+
+```
+/subghz/
+```
+
+4. Drag your `.sub` file into the folder
+5. Done You’re ready to run it from:
+
+```
+> Sub-GHz → Saved → opensesame_390.sub
+```
+
+
+
